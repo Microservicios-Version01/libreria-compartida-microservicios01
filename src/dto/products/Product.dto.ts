@@ -12,24 +12,24 @@ export class ProductDto {
   // @Type(() => Number)
   // limit: number = 10;
 
-  // @IsOptional()
+  @IsOptional()
   @Type(() => String)
   nombre: String;
 
-  // @IsOptional()
+  @IsOptional()
   @Type(() => String)
   tipo: String;
 
-  // @IsOptional()
+  @IsOptional()
   @Type(() => String)
   descripcion: String;
 
-  // @IsOptional()
+  @IsOptional()
   @IsPositive()
   @Type(() => Number)
   precio: Number;
 
-  // @IsOptional()
+  @IsOptional()
   @IsPositive()
   @Type(() => Number)
   precio_venta: Number;
