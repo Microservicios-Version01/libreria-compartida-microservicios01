@@ -12,28 +12,29 @@ export class ProductDto {
   // @Type(() => Number)
   // limit: number = 10;
 
-  @IsOptional()
+  // @IsOptional()
   @Type(() => String)
   nombre: String;
 
-  @IsOptional()
+  // @IsOptional()
   @Type(() => String)
   tipo: String;
 
-  @IsOptional()
+  // @IsOptional()
   @Type(() => String)
   descripcion: String;
 
+  // @IsOptional()
   @IsPositive()
-  @IsOptional()
   @Type(() => Number)
   precio: Number;
 
+  // @IsOptional()
   @IsPositive()
-  @IsOptional()
   @Type(() => Number)
   precio_venta: Number;
 
+  @IsOptional()
   @IsBoolean()
   @Transform(({ value }) => {
     if (value === "true") return true;
@@ -42,6 +43,7 @@ export class ProductDto {
   })
   es_novedad: Boolean;
 
+  @IsOptional()
   @IsBoolean()
   @Transform(({ value }) => {
     if (value === "true") return true;
