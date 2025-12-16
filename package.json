@@ -1,0 +1,34 @@
+{
+  "name": "@renzosanchez1357/libreria-compartida-microservicios01",
+  "version": "1.0.0",
+  "description": "Libreria compartida, para DTOS, y validacion",
+  "main": "dist/index.js",
+  "types": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "pnpm build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "microservicios",
+    "shared"
+  ],
+  "author": "Renzo Sanchez Yanulaque",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Microservicios-Version01/libreria-compartida-microservicios01.git"
+  },
+  "packageManager": "pnpm@10.25.0",
+  "devDependencies": {
+    "@types/node": "^25.0.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.3"
+  }
+}

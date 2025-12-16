@@ -1,0 +1,41 @@
+# Dependencias instaladas
+node_modules/
+pnpm-lock.yaml
+
+# Archivos compilados
+dist/
+*.js
+!*.config.js
+*.d.ts
+*.js.map
+
+# Variables de entorno
+.env
+.env.local
+.env.*.local
+
+# Archivos del SO
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.iml
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testing
+coverage/
+.nyc_output/
+
+# Temporal
+.tmp/
+temp/
