@@ -51,4 +51,13 @@ export class ProductDto {
     return value;
   })
   es_favorito: Boolean;
+
+  @IsOptional()
+  @IsBoolean()
+  @Transform(({ value }) => {
+    if (value === "true") return true;
+    if (value === "false") return false;
+    return value;
+  })
+  disponible: Boolean;
 }
