@@ -1,6 +1,6 @@
 {
   "name": "@renzosanchez1357/libreria-compartida-microservicios01",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Libreria compartida, para DTOS, y validacion",
   "main": "dist/index.js",
   "types": "module",
