@@ -7,7 +7,7 @@ import {
   IsString,
 } from "class-validator";
 import { Transform } from "class-transformer";
-import { EstadoOrden } from "../../enum/order.enum";
+import { EstadoOrden } from "../../enum/order.enum.js";
 
 export class CreateOrderDto {
   @IsNumber()
