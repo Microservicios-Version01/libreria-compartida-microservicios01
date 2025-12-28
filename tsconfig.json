@@ -33,7 +33,7 @@
 
     // Recommended Options
     "jsx": "react-jsx",
-    "verbatimModuleSyntax": false, //Habilita/desabilita las extensiones ejem: ".js en los imports"
+    "verbatimModuleSyntax": true, //Habilita/desabilita las extensiones ejem: ".js en los imports"
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
