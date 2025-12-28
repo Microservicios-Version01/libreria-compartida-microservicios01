@@ -1,5 +1,11 @@
 import { Transform, Type } from "class-transformer";
-import { IsBoolean, IsOptional, IsPositive } from "class-validator";
+import {
+  IsBoolean,
+  IsNumber,
+  IsOptional,
+  IsPositive,
+  IsString,
+} from "class-validator";
 
 export class ProductDto {
   /*
@@ -15,24 +21,25 @@ export class ProductDto {
   // @Type(() => Number)
   // limit: number = 10;
 
-  @IsOptional()
+  @IsString()
   @Type(() => String)
   nombre: String;
 
-  @IsOptional()
+  @IsString()
   @Type(() => String)
   tipo: String;
 
   @IsOptional()
+  @IsString()
   @Type(() => String)
   descripcion: String;
 
-  @IsOptional()
+  @IsNumber()
   @IsPositive()
   @Type(() => Number)
   precio: Number;
 
-  @IsOptional()
+  @IsNumber()
   @IsPositive()
   @Type(() => Number)
   precio_venta: Number;
@@ -55,7 +62,6 @@ export class ProductDto {
   })
   es_favorito: Boolean;
 
-  @IsOptional()
   @IsBoolean()
   @Transform(({ value }) => {
     if (value === "true") return true;

@@ -18,21 +18,31 @@ export class CreateOrderDto {
   @IsPositive()
   items_totales: number;
 
-  //? Arreglar direccion
+  //? Direccion ¿?
+  // direccion_envio: String;
   @IsString()
-  direccion_envio: String;
-  // direccion_calle        String
-  // direccion_numero       Int
-  // direccion_codigopostal Int
-  // direccion_ciudad       String
-  // direccion_provincia    String
-  // direccion_pais         String
+  direccion_calle: String;
+  @IsString()
+  direccion_numero: number;
+  @IsString()
+  direccion_codigopostal: number;
+  @IsString()
+  direccion_ciudad: String;
+  @IsString()
+  direccion_provincia: String;
+  @IsString()
+  direccion_pais: String;
 
   @IsEnum(EstadoOrden, {
     message: `Possible status values are ${EstadoOrden}`,
   })
   @IsOptional()
-  estado: EstadoOrden = EstadoOrden.PENDIENTE;
+  estado: EstadoOrden = EstadoOrden.PENDIENTE; //esto es una opcion por defecto
+  /*
+    Se puede hacer directamente en el schema, 
+    esto es un ejemplo, que tambien se puede 
+    hacer en los dtos
+  */
 
   @IsBoolean()
   @Transform(({ value }) => {
