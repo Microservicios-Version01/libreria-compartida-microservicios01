@@ -2,6 +2,9 @@ import { Transform, Type } from "class-transformer";
 import { IsBoolean, IsOptional, IsPositive } from "class-validator";
 
 export class ProductDto {
+  /*
+   * Paginaciones
+   */
   // @IsPositive()
   // @IsOptional()
   // @Type(() => Number) // transformer: lo convierte a numero
