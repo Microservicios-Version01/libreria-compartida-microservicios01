@@ -1,7 +1,9 @@
+// import { EstadoOrden } from "@prisma/client";
+
 export enum EstadoOrden {
-  PENDIENTE,
-  ENTREGADO,
-  CANCELADO,
+  PENDIENTE = "PENDIENTE",
+  ENTREGADO = "ENTREGADO",
+  CANCELADO = "CANCELADO",
 }
 
 export const EstadoOrdenlista = [

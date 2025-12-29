@@ -10,9 +10,7 @@
   "scripts": {
     "build": "tsc",
     "prepublishOnly": "pnpm build",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "publish": "publish",
-    "login": "login"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "microservicios",

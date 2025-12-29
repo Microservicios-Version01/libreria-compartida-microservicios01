@@ -7,7 +7,7 @@ import {
   IsString,
 } from "class-validator";
 import { Transform } from "class-transformer";
-import { EstadoOrden, EstadoOrdenlista } from "../../enum/order.enum.js";
+import { EstadoOrden, EstadoOrdenlista } from "../../enum/order.enum";
 
 export class CreateOrderDto {
   @IsNumber()
@@ -23,8 +23,10 @@ export class CreateOrderDto {
   @IsString()
   direccion_calle: string;
   @IsNumber()
+  @IsPositive()
   direccion_numero: number;
   @IsNumber()
+  @IsPositive()
   direccion_codigopostal: number;
   @IsString()
   direccion_ciudad: string;
@@ -33,22 +35,23 @@ export class CreateOrderDto {
   @IsString()
   direccion_pais: string;
 
-  @IsEnum(EstadoOrden, {
+  @IsEnum(EstadoOrdenlista, {
     //Se crea una lista, ya que @IsEnum, espera un array no un objeto
     message: `Possible status values are ${EstadoOrdenlista}`,
   })
+  @IsOptional()
   estado_orden: EstadoOrden = EstadoOrden.PENDIENTE; //esto es una opcion por defecto
   /*
     Se puede hacer directamente en el schema, 
     esto es un ejemplo, que tambien se puede 
     hacer en los dtos
   */
-
-  @IsBoolean()
+  @IsOptional()
   @Transform(({ value }) => {
     if (value === "true") return true;
     if (value === "false") return false;
     return value;
   })
-  pagado: boolean = false;
+  @IsBoolean()
+  pagado?: boolean = false;
 }
