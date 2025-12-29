@@ -21,19 +21,19 @@ export class CreateOrderDto {
   //? Direccion ¿?
   // direccion_envio: String;
   @IsString()
-  direccion_calle: String;
+  direccion_calle: string;
   @IsNumber()
   direccion_numero: number;
   @IsNumber()
   direccion_codigopostal: number;
   @IsString()
-  direccion_ciudad: String;
+  direccion_ciudad: string;
   @IsString()
-  direccion_provincia: String;
+  direccion_provincia: string;
   @IsString()
-  direccion_pais: String;
+  direccion_pais: string;
 
-  @IsEnum(EstadoOrdenlista, {
+  @IsEnum(EstadoOrden, {
     //Se crea una lista, ya que @IsEnum, espera un array no un objeto
     message: `Possible status values are ${EstadoOrdenlista}`,
   })
@@ -50,5 +50,5 @@ export class CreateOrderDto {
     if (value === "false") return false;
     return value;
   })
-  pagado: Boolean = false;
+  pagado: boolean = false;
 }
