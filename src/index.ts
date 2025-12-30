@@ -10,5 +10,5 @@ export * from "./dto/orders/change-order-status.dto.js";
 /*
     Al poner "verbatimModuleSyntax": false, desabilito las extensiones de ".js",
     sin embargo, nodejs (de mis projectos), usa ESM(ECMAScript), que requiere explicitamente
-    que se utilizen las extensiones al hacer los importes
+    que se utilizen las extensiones al hacer los importes.
 */
