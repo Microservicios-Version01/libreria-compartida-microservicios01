@@ -35,12 +35,12 @@ export class CreateOrderDto {
   @IsString()
   direccion_pais: string;
 
+  @IsOptional()
   @IsEnum(EstadoOrdenlista, {
     //Se crea una lista, ya que @IsEnum, espera un array no un objeto
-    message: `Possible status values are ${EstadoOrdenlista}`,
+    message: `Estados valido de una orden: ${EstadoOrdenlista}`,
   })
-  @IsOptional()
-  estado_orden: EstadoOrden = EstadoOrden.PENDIENTE; //esto es una opcion por defecto
+  estado: EstadoOrden = EstadoOrden.PENDIENTE; //esto es una opcion por defecto
   /*
     Se puede hacer directamente en el schema, 
     esto es un ejemplo, que tambien se puede 
