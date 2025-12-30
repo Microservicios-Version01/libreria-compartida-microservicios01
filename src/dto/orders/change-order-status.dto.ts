@@ -1,5 +1,5 @@
 import { IsEnum, IsUUID } from "class-validator";
-import { EstadoOrden, EstadoOrdenlista } from "../../enum/order.enum";
+import { EstadoOrden, EstadoOrdenlista } from "../../enum/order.enum.js";
 
 export class ActualizarEstadoOrden {
   @IsUUID(4) // "Version (4) de UUID"
