@@ -18,23 +18,6 @@ export class CreateOrderDto {
   @IsPositive()
   items_totales: number;
 
-  //? Direccion ¿?
-  // direccion_envio: String;
-  @IsString()
-  direccion_calle: string;
-  @IsNumber()
-  @IsPositive()
-  direccion_numero: number;
-  @IsNumber()
-  @IsPositive()
-  direccion_codigopostal: number;
-  @IsString()
-  direccion_ciudad: string;
-  @IsString()
-  direccion_provincia: string;
-  @IsString()
-  direccion_pais: string;
-
   @IsOptional()
   @IsEnum(EstadoOrdenlista, {
     //Se crea una lista, ya que @IsEnum, espera un array no un objeto
@@ -42,10 +25,12 @@ export class CreateOrderDto {
   })
   estado: EstadoOrden = EstadoOrden.PENDIENTE; //esto es una opcion por defecto
   /*
+    '= EstadoOrden.PENDIENTE'
     Se puede hacer directamente en el schema, 
     esto es un ejemplo, que tambien se puede 
     hacer en los dtos
   */
+
   @IsOptional()
   @Transform(({ value }) => {
     if (value === "true") return true;
@@ -55,3 +40,15 @@ export class CreateOrderDto {
   @IsBoolean()
   pagado?: boolean = false;
 }
+
+/*
+  EstadoOrdenlista, es un array de validacion, @IsEnum, necesita iterar sobre
+  una lista de valores, los enums desaparecen en tiempo de ejecucion
+*/
+
+/*
+  En 'estado', es un valor, un tipo de los tipos EstadoOrden,
+  si fuera ': EstadoOrdenlista', indicaria que es de tipo array, 
+  no un valor unico, postdata: EstadoOrden se convierte a un objeto, donde
+  la propiedad de estado debe ser igual a una de sus propiedades
+*/
