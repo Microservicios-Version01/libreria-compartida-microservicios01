@@ -10,7 +10,7 @@ export class OrdenItemDto {
   @IsPositive()
   cantidad: number;
 
-  @IsNumber()
-  @IsPositive()
-  sub_total: number;
+  // @IsNumber()
+  // @IsPositive()
+  // sub_total: number;
 }
