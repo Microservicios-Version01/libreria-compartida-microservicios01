@@ -39,10 +39,10 @@ export class ProductDto {
   @Type(() => Number)
   precio: Number;
 
-  @IsNumber()
-  @IsPositive()
-  @Type(() => Number)
-  precio_venta: Number;
+  // @IsNumber()
+  // @IsPositive()
+  // @Type(() => Number)
+  // precio_venta: Number;
 
   @IsOptional()
   @IsBoolean()
