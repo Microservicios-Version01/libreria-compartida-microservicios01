@@ -62,6 +62,7 @@ export class ProductDto {
   })
   es_favorito: Boolean;
 
+  @IsOptional()
   @IsBoolean()
   @Transform(({ value }) => {
     if (value === "true") return true;
