@@ -1,5 +1,5 @@
 import { ApiProperty } from "@nestjs/swagger";
-import { Transform, Type } from "class-transformer";
+import { Transform } from "class-transformer";
 import {
   IsBoolean,
   IsNumber,
@@ -24,22 +24,22 @@ export class ProductDto {
 
   @ApiProperty()
   @IsString()
-  nombre: String;
+  nombre: string;
 
   @ApiProperty()
   @IsString()
-  tipo: String;
+  tipo: string;
 
   @ApiProperty({ required: false })
   @IsOptional()
   @IsString()
-  descripcion: String;
+  descripcion: string;
 
   @ApiProperty()
   @IsNumber()
   @IsPositive()
   // @Type(() => Number)
-  precio: Number;
+  precio: number;
 
   // @IsNumber()
   // @IsPositive()
@@ -54,7 +54,7 @@ export class ProductDto {
     if (value === "false") return false;
     return value;
   })
-  es_novedad: Boolean;
+  es_novedad: boolean;
 
   @ApiProperty({ required: false })
   @IsOptional()
@@ -64,7 +64,7 @@ export class ProductDto {
     if (value === "false") return false;
     return value;
   })
-  es_favorito: Boolean;
+  es_favorito: boolean;
 
   @ApiProperty({ required: false })
   @IsOptional()
@@ -74,5 +74,5 @@ export class ProductDto {
     if (value === "false") return false;
     return value;
   })
-  disponible: Boolean;
+  disponible: boolean;
 }
