@@ -1,3 +1,4 @@
+import { ApiProperty } from "@nestjs/swagger";
 import { PartialType } from "@nestjs/mapped-types";
 import { ProductDto } from "./Product.dto.js";
 import { IsNumber, IsPositive } from "class-validator";
@@ -5,6 +6,7 @@ import { IsNumber, IsPositive } from "class-validator";
 export class UpdateProductDto extends PartialType(ProductDto) {
   /* Entre microservicios, a la hora de conectarse mediante TCP,
     TIENE que ir el id, del producto */
+  @ApiProperty()
   @IsNumber()
   @IsPositive()
   id: number;

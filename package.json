@@ -17,7 +17,6 @@
     "shared"
   ],
   "author": "Renzo Sanchez Yanulaque",
-  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/Microservicios-Version01/libreria-compartida-microservicios01.git"
@@ -29,6 +28,7 @@
   },
   "dependencies": {
     "@nestjs/mapped-types": "^2.1.0",
+    "@nestjs/swagger": "^11.2.4",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.3"
   },
