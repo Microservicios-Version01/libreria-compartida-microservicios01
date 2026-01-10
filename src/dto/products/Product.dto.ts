@@ -24,21 +24,21 @@ export class ProductDto {
 
   @ApiProperty()
   @IsString()
-  @Type(() => String)
   nombre: String;
 
   @ApiProperty()
   @IsString()
-  @Type(() => String)
   tipo: String;
 
   @ApiProperty({ required: false })
   @IsOptional()
   @IsString()
-  @Type(() => String)
   descripcion: String;
 
-  @ApiProperty()
+  @ApiProperty({
+    type: Number,
+    description: "Precio del producto",
+  })
   @IsNumber()
   @IsPositive()
   @Type(() => Number)
