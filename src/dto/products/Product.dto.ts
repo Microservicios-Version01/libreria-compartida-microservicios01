@@ -35,13 +35,10 @@ export class ProductDto {
   @IsString()
   descripcion: String;
 
-  @ApiProperty({
-    type: Number,
-    description: "Precio del producto",
-  })
+  @ApiProperty()
   @IsNumber()
   @IsPositive()
-  @Type(() => Number)
+  // @Type(() => Number)
   precio: Number;
 
   // @IsNumber()
