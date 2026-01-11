@@ -22,20 +22,34 @@ export class ProductDto {
   // @Type(() => Number)
   // limit: number = 10;
 
-  @ApiProperty()
+  @ApiProperty({
+    description: "Nombre de la pizza",
+    example: "Pizza Margarita",
+  })
   @IsString()
   nombre: string;
 
-  @ApiProperty()
+  @ApiProperty({
+    description: "Subcategoria de producto",
+    example: "Pizza, Pasta, bebida, Oferta de verano, etc",
+  })
   @IsString()
   tipo: string;
 
-  @ApiProperty({ required: false })
+  @ApiProperty({
+    description: "Ingredientes y descripción de la pizza",
+    example: "Tomate, mozzarella, albahaca fresca y aceite de oliva",
+    required: false,
+  })
   @IsOptional()
   @IsString()
   descripcion: string;
 
-  @ApiProperty()
+  @ApiProperty({
+    description: "Precio de la pizza",
+    example: 35.99,
+    type: Number,
+  })
   @IsNumber()
   @IsPositive()
   // @Type(() => Number)
@@ -46,7 +60,12 @@ export class ProductDto {
   // @Type(() => Number)
   // precio_venta: Number;
 
-  @ApiProperty({ required: false })
+  @ApiProperty({
+    description: "Indica si es una pizza nueva en el menú",
+    example: true,
+    required: false,
+    default: false,
+  })
   @IsOptional()
   @IsBoolean()
   @Transform(({ value }) => {
@@ -56,7 +75,12 @@ export class ProductDto {
   })
   es_novedad: boolean;
 
-  @ApiProperty({ required: false })
+  @ApiProperty({
+    description: "Indica si la pizza es favorita de los clientes",
+    example: true,
+    required: false,
+    default: false,
+  })
   @IsOptional()
   @IsBoolean()
   @Transform(({ value }) => {
@@ -66,7 +90,12 @@ export class ProductDto {
   })
   es_favorito: boolean;
 
-  @ApiProperty({ required: false })
+  @ApiProperty({
+    description: "Indica si la pizza está disponible para pedidos",
+    example: true,
+    required: false,
+    default: true,
+  })
   @IsOptional()
   @IsBoolean()
   @Transform(({ value }) => {
