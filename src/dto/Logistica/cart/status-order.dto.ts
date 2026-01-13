@@ -1,6 +1,6 @@
 import { ApiProperty } from "@nestjs/swagger";
 import { IsEnum, IsOptional } from "class-validator";
-import { EstadoOrden, EstadoOrdenlista } from "../../enum/order.enum.js";
+import { EstadoOrden, EstadoOrdenlista } from "../../../enum/order.enum.js";
 
 export class EstadoDto {
   @ApiProperty({
