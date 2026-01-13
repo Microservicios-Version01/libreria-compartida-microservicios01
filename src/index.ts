@@ -1,11 +1,23 @@
+// SERVICIO PRODUCTOS
+
 // Productos
-export * from "./dto/products/Product.dto.js";
-export * from "./dto/products/update-product.dto.js";
+export * from "./dto/Productos/products/Product.dto.js";
+export * from "./dto/Productos/products/update-product.dto.js";
+
+// Categorias
+export * from "./dto/Productos/categories/Category.dto.js";
+export * from "./dto/Productos/categories/update-category.dto.js";
+
+// SERVICIO LOGISTICA
 
 // Ordenes
-export * from "./dto/orders/create-order.dto.js";
-export * from "./dto/orders/status-order.dto.js";
-export * from "./dto/orders/change-order-status.dto.js";
+export * from "./dto/Logistica/orders/create-order.dto.js";
+export * from "./dto//Logistica/orders/status-order.dto.js";
+export * from "./dto/Logistica/orders/change-order-status.dto.js";
+
+// SERVICIO USUARIOS
+
+// SERVICIO USUARIOS
 
 /*
     Al poner "verbatimModuleSyntax": false, desabilito las extensiones de ".js",
